@@ -2,7 +2,7 @@
 
 *Turn old belongings into fresh starts — one reuse at a time.*
 
-**What If: Give Waste A Second Life** is a mobile-style web app that connects people who want items remade (**Makers**) with people who have things to share (**Finders**). List what you have, browse what needs a creative touch, and get notified when a remake is on its way. You can also choose **Both** and switch between roles without leaving the app. Built for our Shark Tank–style classroom project with a classmate partner. 💚 Built by [Techature](https://github.com/Techature).
+**What If: Give Waste A Second Life** is a mobile-style web app that connects people who want items remade (**Makers**) with people who have things to share (**Finders**). List what you have, browse what needs a creative touch, and get notified when a remake is on its way. You can also choose **Both** and switch between roles without leaving the app. Built for our Shark Tank–style classroom project with a classmate partner, Tvisha. 💚 Built by [Techature](https://github.com/Techature).
 
 ---
 
