@@ -47,7 +47,7 @@ Got ideas for new features? I'd love to hear them!
 
 ### 📫 How to reach me
 
-Email me [here](mailto:sahana.aravind@gmail.com?subject=github:%20What%20If%20Give%20Waste%20A%20Second%20Life) — add `github:` in the subject so I know it's about this repo.
+Email me [here](mailto:sahana.aravind15@gmail.com?subject=github:%20What%20If%20Give%20Waste%20A%20Second%20Life) — add `github:` in the subject so I know it's about this repo.
 
 ---
 
