@@ -1,0 +1,561 @@
+/* Shark Tank — mobile-first Blue + Mint design system */
+
+:root {
+  --st-blue-900: #0f2744;
+  --st-blue-700: #1e5a9e;
+  --st-blue-600: #2563eb;
+  --st-mint-600: #0d9488;
+  --st-mint-400: #5eead4;
+  --st-surface: #f0f9ff;
+  --st-card: #ffffff;
+  --st-radius-lg: 18px;
+  --st-radius-md: 14px;
+  --st-shadow-card: 0 8px 24px rgba(30, 90, 158, 0.12);
+  --st-shadow-btn: 0 8px 22px rgba(30, 90, 158, 0.35);
+  --app-width: 320px;
+  --app-height: 450px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body.app-shell {
+  margin: 0;
+  min-height: 100dvh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right))
+    max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  overflow-x: hidden;
+  background: linear-gradient(160deg, #dbeafe 0%, #ecfdf5 45%, #f8fafc 100%);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+#divApplab.appModern.running {
+  position: relative;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 24px 48px rgba(15, 39, 68, 0.16),
+    0 0 0 1px rgba(30, 90, 158, 0.08);
+  transform-origin: top center;
+}
+
+@media (max-width: 360px) {
+  #divApplab.appModern.running {
+    transform: scale(calc((100vw - 24px) / var(--app-width)));
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  #divApplab.appModern.running {
+    transform: scale(min(1.08, calc((100vw - 32px) / var(--app-width))));
+  }
+}
+
+@media (min-width: 768px) {
+  #divApplab.appModern.running {
+    transform: scale(1.25);
+  }
+}
+
+/* Screen 2 — role selection */
+#screen2.screen2-app label {
+  text-rendering: optimizeLegibility;
+}
+
+#screen2 #makerImage,
+#screen2 #finderImage {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#screen2 #makerImage:active,
+#screen2 #finderImage:active {
+  transform: scale(0.96);
+}
+
+#screen2 #makerImage.role-selected {
+  border-color: var(--st-blue-600) !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.25);
+}
+
+#screen2 #finderImage.role-selected {
+  border-color: var(--st-mint-600) !important;
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.25);
+}
+
+#screen2 #bothButton.st-both-role-btn,
+#screen2 .st-both-role-btn {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#screen2 #bothButton.st-both-role-btn:active,
+#screen2 .st-both-role-btn:active {
+  transform: scale(0.98);
+}
+
+#bothScreen1 #label9 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #0f2744 !important;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif !important;
+  left: 16px !important;
+  top: 24px !important;
+  width: 288px !important;
+  height: auto !important;
+  text-align: center !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+#bothScreen1 #image7,
+#bothScreen1 #image8 {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#bothScreen1 #image7:active,
+#bothScreen1 #image8:active {
+  transform: scale(0.96);
+}
+
+#makerScreen1 #image3.st-both-undo,
+#finderScreen1 #image2.st-both-undo {
+  cursor: pointer !important;
+  object-fit: contain !important;
+  background: #ffffff !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+}
+
+#screen2 #makerCard.role-selected-card {
+  border-color: var(--st-blue-600) !important;
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.2);
+}
+
+#screen2 #finderCard.role-selected-card {
+  border-color: var(--st-mint-600) !important;
+  box-shadow: 0 12px 28px rgba(13, 148, 136, 0.2);
+}
+
+#screen2 #nextStepBtn {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+#screen2 #nextStepBtn:not(.design-mode-hidden):active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 14px rgba(30, 90, 158, 0.28);
+}
+
+#screen2 #nextStepBtn:focus-visible {
+  outline: 3px solid var(--st-mint-400);
+  outline-offset: 2px;
+}
+
+#screen2 #screen2Profile {
+  transition: box-shadow 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #screen2 #makerImage,
+  #screen2 #finderImage,
+  #screen2 #nextStepBtn {
+    transition: none;
+  }
+}
+
+/* Shared screens */
+.st-screen {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.st-input {
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.st-input:focus {
+  outline: none;
+  border-color: var(--st-blue-600) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  background-color: #ffffff !important;
+}
+
+.st-btn-primary {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.st-btn-primary:active {
+  transform: scale(0.98);
+}
+
+.st-alert {
+  box-shadow: 0 4px 14px rgba(185, 28, 28, 0.12);
+}
+
+/* Screen 1 — welcome */
+#screen1 #screen1Hero,
+#screen1 #screen1Hero * {
+  pointer-events: none !important;
+}
+
+#screen1 #screen1FormCard,
+#screen1 #screen1FormTitle,
+#screen1 #label1,
+#screen1 #label2 {
+  pointer-events: none !important;
+}
+
+#screen1 #naem,
+#screen1 #button1 {
+  pointer-events: auto !important;
+  z-index: 20;
+  touch-action: manipulation;
+}
+
+#screen1 .st-input::placeholder {
+  color: #94a3b8;
+}
+
+#screen1 #button1:focus-visible {
+  outline: 3px solid var(--st-mint-400);
+  outline-offset: 2px;
+}
+
+/* Maker dashboard */
+#makerScreen1 #label5,
+#makerScreen1 #label5.st-maker-details {
+  text-rendering: optimizeLegibility;
+  color: #0f2744 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif !important;
+  white-space: pre-line !important;
+  line-height: 1.45 !important;
+  background: transparent !important;
+  overflow: visible !important;
+  max-height: none !important;
+  height: auto !important;
+  top: 52px !important;
+  left: 16px !important;
+  width: 288px !important;
+  z-index: 2;
+}
+
+#makerScreen1 #makerMeta,
+#makerScreen1 #makerMeta.st-maker-meta {
+  position: absolute !important;
+  left: 16px !important;
+  width: 288px !important;
+  margin: 0 !important;
+  color: #0f2744 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif !important;
+  white-space: pre-line !important;
+  line-height: 1.45 !important;
+  background: transparent !important;
+  border: 0 !important;
+  z-index: 6 !important;
+  pointer-events: none;
+}
+
+#makerScreen1 #image4 {
+  top: 88px !important;
+  left: 16px !important;
+  width: 288px !important;
+  height: 112px;
+  z-index: 5;
+  display: block !important;
+  background: #f1f5f9;
+  margin: 0 !important;
+  object-fit: cover;
+}
+
+#makerScreen1 #image4.st-item-portrait {
+  object-fit: contain;
+  background: #f1f5f9;
+}
+
+#makerScreen1 #image4.st-item-landscape {
+  object-fit: cover;
+}
+
+#makerScreen1 #label7 {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+#makerScreen1 .st-maker-bell {
+  bottom: 58px !important;
+  right: 16px !important;
+  z-index: 15 !important;
+}
+
+#makerScreen1 .st-maker-notice {
+  bottom: 112px !important;
+  top: auto !important;
+  left: 16px !important;
+  width: 288px !important;
+  max-height: 72px !important;
+  overflow: auto !important;
+  z-index: 20 !important;
+}
+
+#makerScreen1 #sent,
+#makerScreen1 #image5,
+#makerScreen1 #image6 {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#makerScreen1 #sent:active,
+#makerScreen1 #image5:active,
+#makerScreen1 #image6:active {
+  transform: scale(0.96);
+}
+
+/* Finder — list item */
+#finderScreen1 #label3,
+#finderScreen1 #label4 {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #475569 !important;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif !important;
+  line-height: 1.35 !important;
+  width: 288px !important;
+  left: 16px !important;
+  height: auto !important;
+  max-height: none !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+#finderScreen1 #label3 {
+  top: 42px !important;
+  color: #0f2744 !important;
+}
+
+#finderScreen1 #label4 {
+  top: 118px !important;
+  color: #0f2744 !important;
+}
+
+#finderScreen1 #text_input1 {
+  top: 64px !important;
+  left: 16px !important;
+}
+
+#finderScreen1 #text_input2 {
+  top: 140px !important;
+  left: 16px !important;
+}
+
+#finderScreen1 #labelAddress {
+  top: 194px !important;
+}
+
+#finderScreen1 #text_input3 {
+  top: 218px !important;
+  left: 16px !important;
+}
+
+#finderScreen1 #button2 {
+  top: 272px !important;
+  left: 16px !important;
+}
+
+#finderScreen1 #ring1,
+#finderScreen1 #label6 {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+#finderScreen1 .st-finder-bell,
+.st-finder-bell {
+  position: absolute;
+  isolation: isolate;
+  left: auto;
+  right: 16px;
+  top: auto;
+  bottom: 14px;
+  z-index: 12;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin: 0;
+  border: 2px solid #bfdbfe;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #1e5a9e;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(30, 90, 158, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.st-finder-bell:active {
+  transform: scale(0.96);
+}
+
+.st-finder-bell.has-unread::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 11px;
+  height: 11px;
+  background: #dc2626;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.35);
+}
+
+/* Maker bottom toolbar: ← | Sent | → */
+#divApplab #makerScreen1 #image5,
+#makerScreen1 #image5 {
+  position: absolute !important;
+  left: 16px !important;
+  top: 382px !important;
+  width: 44px !important;
+  height: 44px !important;
+  margin: 0 !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+  z-index: 3 !important;
+}
+
+#divApplab #makerScreen1 #image6,
+#makerScreen1 #image6 {
+  position: absolute !important;
+  left: 260px !important;
+  top: 382px !important;
+  width: 44px !important;
+  height: 44px !important;
+  margin: 0 !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+  z-index: 3 !important;
+}
+
+#divApplab #makerScreen1 #sent,
+#makerScreen1 #sent {
+  position: absolute !important;
+  left: 108px !important;
+  top: 382px !important;
+  width: 104px !important;
+  height: 44px !important;
+  margin: 0 !important;
+  padding: 0 12px !important;
+  box-sizing: border-box !important;
+  z-index: 2 !important;
+}
+
+#finderScreen1 .st-finder-notice,
+.st-finder-notice {
+  position: absolute;
+  left: 16px;
+  top: auto;
+  bottom: 68px;
+  width: 288px;
+  z-index: 11;
+  background: #ffffff;
+  color: #0f2744;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  line-height: 1.45;
+  padding: 12px 14px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(15, 39, 68, 0.14);
+  border: 1px solid rgba(30, 90, 158, 0.12);
+  text-align: left;
+}
+
+/* Finder — list item (inputs) */
+#finderScreen1 .st-input::placeholder {
+  color: #94a3b8;
+}
+
+#finderScreen1 #button2 {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#finderScreen1 #button2:active {
+  transform: scale(0.98);
+}
+
+#finderScreen1 #label6.design-mode-hidden,
+#finderScreen1 #ring1.design-mode-hidden {
+  display: none;
+}
+
+#finderScreen1 #finderBell {
+  display: flex !important;
+  visibility: visible !important;
+}
+
+.st-profile-badge {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .st-input,
+  .st-btn-primary,
+  #makerScreen1 #sent,
+  #finderScreen1 #button2 {
+    transition: none;
+  }
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  font-display: block;
+  src: url("applab/fa-brands-400.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  font-display: block;
+  src: url("applab/fa-solid-900.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  font-display: block;
+  src: url("applab/fa-regular-400.woff2") format("woff2");
+  unicode-range: U+F003,U+F006,U+F014,U+F016-F017,U+F01A-F01B,U+F01D,U+F022,U+F03E,U+F044,U+F046,U+F05C-F05D,U+F06E,U+F070,U+F087-F088,U+F08A,U+F094,U+F096-F097,U+F09D,U+F0A0,U+F0A2,U+F0A4-F0A7,U+F0C5,U+F0C7,U+F0E5-F0E6,U+F0EB,U+F0F6-F0F8,U+F10C,U+F114-F115,U+F118-F11A,U+F11C-F11D,U+F133,U+F147,U+F14E,U+F150-F152,U+F185-F186,U+F18E,U+F190-F192,U+F196,U+F1C1-F1C9,U+F1D9,U+F1DB,U+F1E3,U+F1EA,U+F1F7,U+F1F9,U+F20A,U+F247-F248,U+F24A,U+F24D,U+F255-F25B,U+F25D,U+F271-F274,U+F278,U+F27B,U+F28C,U+F28E,U+F29C,U+F2B5,U+F2B7,U+F2BA,U+F2BC,U+F2BE,U+F2C0-F2C1,U+F2C3,U+F2D0,U+F2D2,U+F2D4,U+F2DC;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  font-display: block;
+  src: url("applab/fa-v4compatibility.woff2") format("woff2");
+  unicode-range: U+F041,U+F047,U+F065-F066,U+F07D-F07E,U+F080,U+F08B,U+F08E,U+F090,U+F09A,U+F0AC,U+F0AE,U+F0B2,U+F0D0,U+F0D6,U+F0E4,U+F0EC,U+F10A-F10B,U+F123,U+F13E,U+F148-F149,U+F14C,U+F156,U+F15E,U+F160-F161,U+F163,U+F175-F178,U+F195,U+F1F8,U+F219,U+F27A;
+}
