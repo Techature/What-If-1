@@ -1,18 +1,22 @@
-# What If: Give Waste A Second Life ✨
+<h1 align="center">What If: Give Waste A Second Life ✨</h1>
 
-*Turn old belongings into fresh starts — one reuse at a time.*
+<p align="center">
+<b>Turn old belongings into fresh starts — one reuse at a time.</b>
+</p>
 
-**What If: Give Waste A Second Life** is a mobile-style web app that connects people who want items remade (**Makers**) with people who have things to share (**Finders**). List what you have, browse what needs a creative touch, and get notified when a remake is on its way. You can also choose **Both** and switch between roles without leaving the app. Built for our Shark Tank–style classroom project with a classmate partner, Tvisha. 💚 Built by [Techature](https://github.com/Techature).
+<p align="center">
+What If is a mobile-style web app that connects people who want items remade (<b>Makers</b>) with people who have things to share (<b>Finders</b>). List what you have, browse what needs a creative touch, and get notified when a remake is on its way. You can also choose <b>Both</b> and switch between roles without leaving the app. Built for our Shark Tank–style classroom project with a classmate partner, Tvisha. 💚 Built by <a href="https://github.com/Techature">Techature</a>.
+</p>
 
 ---
 
 ### 🌱 What It Does
 
-1. **Welcome** — Enter your name and start your reuse journey.
-2. **Pick a role** — **Maker**, **Finder**, or **Both** (no extra screens; same dashboards for everyone).
+1. Enter your name and start your reuse journey.
+2. Pick **Maker**, **Finder**, or **Both** by clicking any of them. (No extra screens for Both; same dashboards for everyone).
 3. **Finder** — Submit an item photo, type, and delivery address so a Maker can remake it.
-4. **Maker** — Browse finder requests, view details, and tap **Sent** when the remake is ready.
-5. **Notifications** — Bell icon and inbox show when an item is ready for pickup (stored in your browser).
+4. **Maker** — Browse finder requests, view details, and tap **Sent** when the remake is ready to courier and pick up.
+5. **Notifications** — Bell icon and inbox show when an item is ready for pickup (Stored in your browser).
 6. **Both** — Choose Maker or Finder from the home chooser; use the **undo** profile button anytime to switch roles.
 
 ### 🌏 How It Helps
@@ -51,4 +55,4 @@ Email me [here](mailto:sahana.aravind15@gmail.com?subject=github:%20What%20If%20
 
 ---
 
-As I'm just a kid, updates may come with a bit of delay. Thanks for understanding! 💞
+<p align="center">As I'm just a kid, updates may come with a bit of delay. Thanks for understanding! 💞</p>
