@@ -28,10 +28,13 @@ HOW TO RUN LOCALLY:
 1. Double-click `RUN.bat` (or run: python -m http.server 8080)
 2. Open http://localhost:8080/ in your browser.
 
-The app uses `runtime.js` + `code.js` (fast, works offline). The old
-`applab/applab-api.js` file is no longer loaded for local preview.
+Option C hybrid: runtime-loader.js picks runtime.js (default) or
+runtime-cloud.js (?cloud=1). Same code.js for both.
 
-Data (Finders list) is stored in your browser via localStorage.
+  http://localhost:8080/          — localStorage
+  http://localhost:8080/?cloud=1  — Supabase (SUPABASE_SETUP.md + config.js)
+
+Data (Finders) uses localStorage unless cloud mode talks to your backend.
 
 After editing code.js only — no sync step required for local run.
 Use `node sync-code.js` only if you upload the project back to Code.org.

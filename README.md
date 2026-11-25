@@ -43,7 +43,18 @@ Then open **http://localhost:8080/** in your browser.
 
 On Windows, you can also double-click **`RUN.bat`** in the project folder — it starts the same server and prints the link.
 
+**Option C — hybrid (same `code.js`, two runtimes)**
+
+| URL | Runtime | Data |
+|-----|---------|------|
+| http://localhost:8080/ | `runtime.js` | Browser `localStorage` (offline dev) |
+| http://localhost:8080/?cloud=1 | `runtime-cloud.js` | **[Supabase](https://supabase.com)** (free) — see [SUPABASE_SETUP.md](SUPABASE_SETUP.md) |
+
+`index.html` loads `runtime-loader.js`, which picks the runtime. Fill in `config.js` with your Supabase URL + anon key; until then, `?cloud=1` falls back to `localStorage`.
+
 > **Tip:** After you change `code.js` or styles, refresh the page. Data stays in your browser until you clear site storage.
+
+**Pitch / classroom demo with cloud data:** run the app in **App Lab on Code.org**, not Web Lab. See [CODEORG_SETUP.md](CODEORG_SETUP.md).
 
 ### 💌 Ask me about...
 

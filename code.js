@@ -379,13 +379,13 @@ onEvent("nextStepBtn", "click", function() {
 
 onEvent("image7", "click", function () {
   if (role == "Both") {
-    enterMakerDashboard();
+    enterFinderDashboard();
   }
 });
 
 onEvent("image8", "click", function () {
   if (role == "Both") {
-    enterFinderDashboard();
+    enterMakerDashboard();
   }
 });
 
